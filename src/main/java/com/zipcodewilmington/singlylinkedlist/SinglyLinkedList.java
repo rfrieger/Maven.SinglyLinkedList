@@ -37,9 +37,54 @@ public class SinglyLinkedList {
         }
     }
 
+    public Integer find(Integer num) {
+
+        int index = 0;
+        if (num == null) {
+            for (Node x = head; x != null; x = x.next) {
+                if (x.getInfo() == null) {
+                    return index;
+                }
+                index++;
+            }
+        } else {
+            for (Node x = head; x != null; x = x.next) {
+                if (num.equals(x.getInfo())) {
+                    return index; }
+                index++;
+            }
+        }
+        return -1;
+    }
+
     public Integer size() {
         return this.size;
     }
+
+
+    public Boolean contains(Integer num) {
+
+        Integer result = this.find(num);
+
+        if (result == -1) {
+            return false;
+        }
+            return true;
+    }
+
+
+    public Integer get() {
+        return null;
+    }
+
+    public SinglyLinkedList copy(){
+        return this;
+    }
+
+    public SinglyLinkedList sort(){
+        return null;
+    }
+
 
 
     public class Node {
