@@ -105,26 +105,4 @@ public class SinglyLinkedListTest {
         Boolean expected2 = singlyLinkedList.contains(7);
         Assert.assertEquals(expected,actual);
     }
-
-    @Test
-    public void sort() {
-        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        singlyLinkedList.add(5);
-        singlyLinkedList.add(4);
-        singlyLinkedList.add(7);
-
-
-
-        Integer actual = singlyLinkedList.copy().find(5);
-        Integer expected = 1;
-        Assert.assertEquals(expected,actual);
-
-        Integer actual1 = singlyLinkedList.copy().find(4);
-        Integer expected1 = 0;
-        Assert.assertEquals(expected,actual);
-
-        Integer actual2 = singlyLinkedList.copy().find(7);
-        Integer expected2 = 2;
-        Assert.assertEquals(expected,actual);
-    }
 }

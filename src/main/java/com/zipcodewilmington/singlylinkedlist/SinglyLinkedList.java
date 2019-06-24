@@ -89,22 +89,6 @@ public class SinglyLinkedList {
         return newList;
     }
 
-    public SinglyLinkedList sort() {
-
-        for (int i = 0; i < this.size; i++) {
-//            while(head.next != null) {
-//                if (this.head this.head.next) {
-//                    Node temp;
-//                    temp = this.head.next;
-//                    head.next = head;
-//                    head = temp;
-//                }
-//            }
-        }
-        return this.copy();
-    }
-
-
 
     public class Node {
         private Node next;
