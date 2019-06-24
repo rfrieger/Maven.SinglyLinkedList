@@ -1,5 +1,7 @@
 package com.zipcodewilmington.singlylinkedlist;
 
+import sun.awt.image.ImageWatched;
+
 import java.security.PublicKey;
 import java.util.LinkedList;
 
@@ -7,6 +9,7 @@ import java.util.LinkedList;
  * Created by leon on 1/10/18.
  */
 public class SinglyLinkedList {
+
     Node head;
     Node tail;
     int size = 0;
@@ -50,7 +53,8 @@ public class SinglyLinkedList {
         } else {
             for (Node x = head; x != null; x = x.next) {
                 if (num.equals(x.getInfo())) {
-                    return index; }
+                    return index;
+                }
                 index++;
             }
         }
@@ -69,20 +73,35 @@ public class SinglyLinkedList {
         if (result == -1) {
             return false;
         }
-            return true;
+        return true;
     }
 
-
-    public Integer get() {
-        return null;
-    }
 
     public SinglyLinkedList copy(){
-        return this;
+        SinglyLinkedList newList = new SinglyLinkedList();
+        Node node = head;
+        while(node != null) {
+            newList.add( node.getInfo());
+            node = node.getNext();
+
+        }
+
+        return newList;
     }
 
-    public SinglyLinkedList sort(){
-        return null;
+    public SinglyLinkedList sort() {
+
+        for (int i = 0; i < this.size; i++) {
+//            while(head.next != null) {
+//                if (this.head this.head.next) {
+//                    Node temp;
+//                    temp = this.head.next;
+//                    head.next = head;
+//                    head = temp;
+//                }
+//            }
+        }
+        return this.copy();
     }
 
 
@@ -121,5 +140,7 @@ public class SinglyLinkedList {
     public Node getPrev() {
         return prev;
     }
-}
+
+//
+    }
 }
